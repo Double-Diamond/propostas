@@ -1,0 +1,15 @@
+<section id="cronograma">
+  <h2>{{ secoes.cronograma.titulo }}</h2>
+  <ol>
+    {% for etapa in secoes.cronograma.etapas %}
+      <li>
+        <strong>{{ etapa.nome }}</strong> – {{ etapa.duracao }}
+        <ul>
+          {% for ent in etapa.entregaveis %}
+            <li>{{ ent }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ol>
+</section>

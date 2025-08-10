@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="../favicon.svg" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#8447FF" />
+  <meta name="description" content="Proposta 1899 Thiago Pessoa - Double Diamond" />
+  <link rel="apple-touch-icon" href="../favicon.svg" />
+  <link rel="manifest" href="../manifest.json" />
+  <title>Proposta 1899 Thiago Pessoa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Raleway:wght@700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: #8447FF;
+      --secondary: #5D22D5;
+      --text-primary: #FFFFFF;
+      --text-secondary: rgba(255, 255, 255, 0.7);
+      --background: #080821;
+      --card-background: rgba(255, 255, 255, 0.05);
+      --border-color: rgba(255, 255, 255, 0.1);
+      --diamond-purple: #8447FF;
+      --diamond-pink: #F686BD;
+      --diamond-orange: #FF9B21;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--text-primary);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    header {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .logos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      height: 40px;
+    }
+    
+    .hero {
+      padding: 5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .hero-content {
+      flex: 1 1 600px;
+    }
+    
+    .hero-image {
+      flex: 1 1 400px;
+      text-align: right;
+    }
+    
+    h1 {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(to right, #9747FF, #7E74ED);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline;
+    }
+    
+    .intro-text {
+      font-size: clamp(1rem, 1.2vw, 1.2rem);
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+    
+    .section {
+      padding: 5rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+    
+    .card {
+      background-color: var(--card-background);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid var(--border-color);
+    }
+    
+    ul.itens {
+      margin: 1.5rem 0;
+      padding-left: 1.5rem;
+    }
+    
+    ul.itens li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .etapa {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    
+    .etapa-info {
+      flex: 1 1 300px;
+    }
+    
+    .etapa-entregaveis {
+      flex: 1 1 300px;
+    }
+    
+    .etapa-titulo {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    
+    .investimento-detalhe {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .investimento-valor {
+      flex: 1;
+      text-align: center;
+    }
+    
+    .valor-destaque {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    
+    .observacoes {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+    
+    footer {
+      padding: 3rem 0;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    
+    .contato-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    
+    .contato-item {
+      text-align: center;
+    }
+    
+    .contato-titulo {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contato-valor {
+      color: var(--primary);
+    }
+    
+    .button {
+      display: inline-block;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Adicionar mais estilos conforme necessário para simular o app React */
+    .btn {
+      display: inline-block;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .bg-animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .bg-grid {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      background-size: 30px 30px;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logos">
+        <img src="../dd_logo_light.png" alt="Double Diamond" class="logo">
+        <img src="../thiago-pessoa-logo.png" alt="Thiago Pessoa" class="logo">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Transformação digital de criação de proposta para novos clientes que vamos entrar em contato. <span class="gradient-text">Thiago Pessoa</span></h1>
+          <p class="intro-text">Uma proposta de ter propostas sendo geradas de forma dinamica.</p>
+          <div>
+            <a href="#escopo" class="button">Ver Escopo</a>
+            <a href="#investimento" class="button">Ver Investimento</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="../hero-image.jpg" alt="Imagem de parceria" style="max-width: 100%; border-radius: 12px;">
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container">
+        <h2 class="section-title">Sobre a Double Diamond</h2>
+        <p class="section-subtitle">Somos especialistas em transformação digital com foco em resultados.</p>
+        <div class="card">
+          <p>A Double Diamond é uma empresa especializada em desenvolvimento de soluções digitais, focada em resultados e excelência.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="escopo" class="section">
+      <div class="container">
+        <h2 class="section-title">Escopo da Consultoria</h2>
+        <p class="section-subtitle">Nossa consultoria em IA irá focar na otimização dos processos de negócio através de soluções personalizadas de inteligência artificial.</p>
+        <div class="card">
+          <ul class="itens">
+            <li>Análise de processos atuais</li>
+            <li>Identificação de oportunidades para aplicação de IA</li>
+            <li>Desenvolvimento de provas de conceito</li>
+            <li>Implementação de agentes de IA conversacionais</li>
+            <li>Integração com sistemas existentes</li>
+            <li>Treinamento da equipe</li>
+            <li>Suporte contínuo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="cronograma" class="section">
+      <div class="container">
+        <h2 class="section-title">Cronograma</h2>
+        <p class="section-subtitle">Nosso planejamento para implementação do projeto.</p>
+        
+        <div class="card etapa">
+          <div class="etapa-info">
+            <h3 class="etapa-titulo">Etapa 1: Planejamento</h3>
+            <p>Duração: 2 semanas</p>
+          </div>
+          <div class="etapa-entregaveis">
+            <h4>Entregáveis:</h4>
+            <ul>
+              <li>Documento de requisitos</li>
+              <li>Plano de projeto</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card etapa">
+          <div class="etapa-info">
+            <h3 class="etapa-titulo">Etapa 2: Desenvolvimento</h3>
+            <p>Duração: 4 semanas</p>
+          </div>
+          <div class="etapa-entregaveis">
+            <h4>Entregáveis:</h4>
+            <ul>
+              <li>Protótipo funcional</li>
+              <li>Código-fonte</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card etapa">
+          <div class="etapa-info">
+            <h3 class="etapa-titulo">Etapa 3: Implementação</h3>
+            <p>Duração: 2 semanas</p>
+          </div>
+          <div class="etapa-entregaveis">
+            <h4>Entregáveis:</h4>
+            <ul>
+              <li>Sistema implementado</li>
+              <li>Documentação</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="investimento" class="section">
+      <div class="container">
+        <h2 class="section-title">Investimento</h2>
+        <p class="section-subtitle">Nosso investimento para transformar sua empresa.</p>
+        <div class="card">
+          <div class="investimento-detalhe">
+            <div class="investimento-valor">
+              <h3>Valor Total</h3>
+              <p class="valor-destaque">R$ 18.500,00</p>
+            </div>
+            <div class="investimento-valor">
+              <h3>Parcelamento</h3>
+              <p class="valor-destaque">3x de R$ 6.166,67</p>
+            </div>
+          </div>
+          <p class="observacoes">Valores sujeitos a impostos conforme legislação vigente. Desconto de 10% para pagamento à vista.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="conclusao" class="section">
+      <div class="container">
+        <h2 class="section-title">Conclusão</h2>
+        <div class="card">
+          <p>Estamos animados com a possibilidade de trabalhar juntos neste projeto. Acreditamos que nossa expertise irá contribuir significativamente para o sucesso da sua empresa.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="logos" style="margin-bottom: 2rem;">
+        <img src="../dd_logo_alltype_light.png" alt="Double Diamond" style="height: 50px;">
+        <img src="../thiago-pessoa-logo-white.png" alt="Thiago Pessoa" style="height: 40px;">
+      </div>
+      
+      <div class="contato-grid">
+        <div class="contato-item">
+          <h3 class="contato-titulo">Email</h3>
+          <p class="contato-valor">contato@doublediamond.com.br</p>
+        </div>
+        <div class="contato-item">
+          <h3 class="contato-titulo">Telefone</h3>
+          <p class="contato-valor">+55 11 99999-9999</p>
+        </div>
+        <div class="contato-item">
+          <h3 class="contato-titulo">Website</h3>
+          <p class="contato-valor">www.doublediamond.com.br</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var __manus_space_editor_info = {
+      spaceId: 'ihwmjkai',
+      content: {"cliente":{"id":"1899","nome":"Thiago Pessoa","spaceId":"ihwmjkai"},"proposta":{"titulo":"Transformação digital de criação de proposta para novos clientes que vamos entrar em contato.","intro":"Uma proposta de ter propostas sendo geradas de forma dinamica."},"secoes":{"sobre":{"titulo":"Sobre a Double Diamond","conteudo":"A Double Diamond é uma empresa especializada em desenvolvimento de soluções digitais, focada em resultados e excelência."},"escopo":{"titulo":"Escopo da Consultoria","conteudo":"Nossa consultoria em IA irá focar na otimização dos processos de negócio através de soluções personalizadas de inteligência artificial.","itens":["Análise de processos atuais","Identificação de oportunidades para aplicação de IA","Desenvolvimento de provas de conceito","Implementação de agentes de IA conversacionais","Integração com sistemas existentes","Treinamento da equipe","Suporte contínuo"]},"cronograma":{"titulo":"Cronograma","etapas":[{"nome":"Etapa 1: Planejamento","duracao":"2 semanas","entregaveis":["Documento de requisitos","Plano de projeto"]},{"nome":"Etapa 2: Desenvolvimento","duracao":"4 semanas","entregaveis":["Protótipo funcional","Código-fonte"]},{"nome":"Etapa 3: Implementação","duracao":"2 semanas","entregaveis":["Sistema implementado","Documentação"]}]},"investimento":{"titulo":"Investimento","total":"R$ 18.500,00","parcelas":"3x de R$ 6.166,67","observacoes":"Valores sujeitos a impostos conforme legislação vigente. Desconto de 10% para pagamento à vista."},"conclusao":{"titulo":"Conclusão","conteudo":"Estamos animados com a possibilidade de trabalhar juntos neste projeto. Acreditamos que nossa expertise irá contribuir significativamente para o sucesso da sua empresa."}},"contato":{"email":"contato@doublediamond.com.br","telefone":"+55 11 99999-9999","site":"www.doublediamond.com.br"}},
+      patchList: []
+    };
+  </script>
+</body>
+
+</html>

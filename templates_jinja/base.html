@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="theme-color" content="#8447FF"/>
+  <title>Proposta {{ cliente.id }} {{ cliente.nome }}</title>
+  <meta name="description" content="Proposta {{ cliente.id }} {{ cliente.nome }} - Double Diamond"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Raleway:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #8447FF;
+      --secondary: #5D22D5;
+      --text-primary: #FFFFFF;
+      --text-secondary: rgba(255, 255, 255, 0.7);
+      --background: #080821;
+      --card-background: rgba(255, 255, 255, 0.05);
+      --border-color: rgba(255, 255, 255, 0.1);
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--text-primary);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    header { padding: 2rem 0; border-bottom: 1px solid var(--border-color); }
+    .logos { display: flex; justify-content: space-between; align-items: center; }
+    .logo { height: 40px; }
+    .hero { padding: 5rem 0; display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; }
+    .hero-content { flex: 1 1 600px; }
+    .hero-image { flex: 1 1 400px; text-align: right; }
+    h1 { font-family: 'Raleway', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1.5rem; font-weight: 700; }
+    .intro-text { font-size: clamp(1rem, 1.2vw, 1.2rem); color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; }
+    .button { display:inline-block; background:linear-gradient(to right,var(--primary),var(--secondary)); color:#fff; padding:1rem 2rem; border-radius:50px; text-decoration:none; font-weight:600; margin-right:1rem; margin-bottom:1rem; border:none; cursor:pointer; }
+    .section { padding:5rem 0; border-bottom:1px solid var(--border-color); }
+    .section-title { font-size:2rem; margin-bottom:1rem; }
+    .section-subtitle { font-size:1.2rem; color:var(--text-secondary); margin-bottom:2rem; }
+    .card { background-color:var(--card-background); border-radius:12px; padding:2rem; margin-bottom:2rem; border:1px solid var(--border-color); }
+    ul.itens { margin:1.5rem 0; padding-left:1.5rem; }
+    ul.itens li { margin-bottom:0.75rem; }
+    .etapa{margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem;}
+    .etapa-info{flex:1 1 300px;}
+    .etapa-entregaveis{flex:1 1 300px;}
+    .etapa-titulo{font-size:1.2rem; margin-bottom:0.5rem; color:var(--primary);}
+    .investimento-detalhe{display:flex; flex-wrap:wrap; gap:2rem; margin-top:2rem;}
+    .investimento-valor{flex:1; text-align:center;}
+    .valor-destaque{font-size:2.5rem; font-weight:600; color:var(--primary);}
+    footer{padding:3rem 0; background:rgba(0,0,0,0.2);} .contato-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logos">
+        <img src="../dd_logo_light.png" alt="Double Diamond" class="logo">
+        <img src="../{{ cliente_slug }}-logo.png" alt="{{ cliente.nome }}" class="logo">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>{{ proposta.titulo }}</h1>
+          <p class="intro-text">{{ proposta.intro }}</p>
+          <div>
+            <a href="#escopo" class="button">Ver Escopo</a>
+            <a href="#investimento" class="button">Ver Investimento</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="../hero-image.jpg" alt="Imagem" style="max-width:100%; border-radius:12px;">
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container">
+        <h2 class="section-title">{{ secoes.sobre.titulo }}</h2>
+        <div class="card">
+          <p>{{ secoes.sobre.conteudo }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="escopo" class="section">
+      <div class="container">
+        <h2 class="section-title">{{ secoes.escopo.titulo }}</h2>
+        <p class="section-subtitle">{{ secoes.escopo.conteudo }}</p>
+        <div class="card">
+          <ul class="itens">
+            {% for item in secoes.escopo.itens %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="cronograma" class="section">
+      <div class="container">
+        <h2 class="section-title">{{ secoes.cronograma.titulo }}</h2>
+        {% for etapa in secoes.cronograma.etapas %}
+        <div class="card etapa">
+          <div class="etapa-info">
+            <h3 class="etapa-titulo">{{ etapa.nome }}</h3>
+            <p>Duração: {{ etapa.duracao }}</p>
+          </div>
+          <div class="etapa-entregaveis">
+            <h4>Entregáveis:</h4>
+            <ul>
+              {% for ent in etapa.entregaveis %}
+                <li>{{ ent }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    {% if secoes.mapeamento %}
+    <section id="mapeamento" class="section">
+      <div class="container">
+        <h2 class="section-title">{{ secoes.mapeamento.titulo }}</h2>
+        <p class="section-subtitle">{{ secoes.mapeamento.conteudo }}</p>
+        {% if secoes.mapeamento.itens %}
+        <div class="card">
+          <ul class="itens">
+            {% for item in secoes.mapeamento.itens %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    <section id="investimento" class="section">
+      <div class="container">
+        <h2 class="section-title">{{ secoes.investimento.titulo }}</h2>
+        <div class="card">
+          <div class="investimento-detalhe">
+            <div class="investimento-valor">
+              <h3>Valor Total</h3>
+              <p class="valor-destaque">{{ secoes.investimento.total }}</p>
+            </div>
+            <div class="investimento-valor">
+              <h3>Parcelamento</h3>
+              <p class="valor-destaque">{{ secoes.investimento.parcelas }}</p>
+            </div>
+          </div>
+          <p class="observacoes">{{ secoes.investimento.observacoes }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="conclusao" class="section">
+      <div class="container">
+        <h2 class="section-title">{{ secoes.conclusao.titulo }}</h2>
+        <div class="card">
+          <p>{{ secoes.conclusao.conteudo }}</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="logos" style="margin-bottom:2rem;">
+        <img src="../dd_logo_alltype_light.png" alt="Double Diamond" style="height:50px;">
+        <img src="../{{ cliente_slug }}-logo-white.png" alt="{{ cliente.nome }}" style="height:40px;">
+      </div>
+      <div class="contato-grid">
+        <div class="contato-item"><h3>Email</h3><p class="valor-destaque">{{ contato.email }}</p></div>
+        <div class="contato-item"><h3>Telefone</h3><p class="valor-destaque">{{ contato.telefone }}</p></div>
+        <div class="contato-item"><h3>Website</h3><p class="valor-destaque">{{ contato.site }}</p></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

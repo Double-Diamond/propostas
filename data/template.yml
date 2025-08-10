@@ -1,0 +1,51 @@
+# Preencha os campos entre aspas ou listas
+cliente:
+  id: "CLIENT_ID"
+  nome: "CLIENT_NAME"
+  spaceId: "SPACE_ID (opcional)"
+
+proposta:
+  titulo: "Título da Proposta"
+  intro: "Texto introdutório da proposta"
+
+secoes:
+  sobre:
+    titulo: "Sobre Nós"
+    conteudo: "Descrição da empresa ou solução."
+  escopo:
+    titulo: "Escopo do Projeto"
+    conteudo: "Breve explicação do escopo."
+    itens:
+      - "Item 1 do escopo"
+      - "Item 2 do escopo"
+  cronograma:
+    titulo: "Cronograma"
+    etapas:
+      - nome: "Etapa 1"
+        duracao: "X semanas"
+        entregaveis:
+          - "Entregável 1"
+          - "Entregável 2"
+      - nome: "Etapa 2"
+        duracao: "X semanas"
+        entregaveis:
+          - "Entregável 1"
+  investimento:
+    titulo: "Investimento"
+    total: "R$ XX.XXX,XX"
+    parcelas: "3x de R$ X.XXX,XX"
+    observacoes: "Observações sobre pagamento, descontos, etc."
+  mapeamento:
+    titulo: "Mapeamento de Processos"
+    conteudo: "Descrição do mapeamento de processos."
+    itens:
+      - "Processo 1"
+      - "Processo 2"
+  conclusao:
+    titulo: "Conclusão"
+    conteudo: "Mensagem final de encerramento."
+
+contato:
+  email: "email@exemplo.com"
+  telefone: "+55 00 00000-0000"
+  site: "www.exemplo.com"

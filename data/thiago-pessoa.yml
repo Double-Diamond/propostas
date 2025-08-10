@@ -1,0 +1,27 @@
+cliente:
+  id: 1899
+  nome: "Roberto Peluzzo"
+  spaceId: ihwmjkai
+
+proposta:
+  titulo: "Transformação digital de criação de proposta para novos clientes que vamos entrar em contato."
+  intro: "Uma proposta de ter propostas sendo geradas de forma dinamica."
+
+secoes:
+  sobre:
+    conteudo: "A Double Diamond é uma empresa especializada em desenvolvimento de soluções digitais, focada em resultados e excelência."
+  escopo:
+    titulo: "Escopo da Consultoria"
+    conteudo: "Nossa consultoria em IA irá focar na otimização dos processos de negócio através de soluções personalizadas de inteligência artificial."
+    itens:
+      - "Análise de processos atuais"
+      - "Identificação de oportunidades para aplicação de IA"
+      - "Desenvolvimento de provas de conceito"
+      - "Implementação de agentes de IA conversacionais"
+      - "Integração com sistemas existentes"
+      - "Treinamento da equipe"
+      - "Suporte contínuo"
+  investimento:
+    total: "R$ 18.500,00"
+    parcelas: "3x de R$ 9.999,99"
+    observacoes: "Valores sujeitos a impostos conforme legislação vigente. Desconto de 10% para pagamento à vista."

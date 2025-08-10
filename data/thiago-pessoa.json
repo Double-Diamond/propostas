@@ -1,0 +1,65 @@
+{
+  "cliente": {
+    "id": "1899",
+    "nome": "Thiago Pessoa",
+    "spaceId": "ihwmjkai"
+  },
+  "proposta": {
+    "titulo": "Transformação digital de criação de proposta para novos clientes que vamos entrar em contato.",
+    "intro": "Uma proposta de ter propostas sendo geradas de forma dinamica."
+  },
+  "secoes": {
+    "sobre": {
+      "titulo": "Sobre a Double Diamond",
+      "conteudo": "A Double Diamond é uma empresa especializada em desenvolvimento de soluções digitais, focada em resultados e excelência."
+    },
+    "escopo": {
+      "titulo": "Escopo da Consultoria",
+      "conteudo": "Nossa consultoria em IA irá focar na otimização dos processos de negócio através de soluções personalizadas de inteligência artificial.",
+      "itens": [
+        "Análise de processos atuais",
+        "Identificação de oportunidades para aplicação de IA",
+        "Desenvolvimento de provas de conceito",
+        "Implementação de agentes de IA conversacionais",
+        "Integração com sistemas existentes",
+        "Treinamento da equipe",
+        "Suporte contínuo"
+      ]
+    },
+    "cronograma": {
+      "titulo": "Cronograma",
+      "etapas": [
+        {
+          "nome": "Etapa 1: Planejamento",
+          "duracao": "2 semanas",
+          "entregaveis": ["Documento de requisitos", "Plano de projeto"]
+        },
+        {
+          "nome": "Etapa 2: Desenvolvimento",
+          "duracao": "4 semanas",
+          "entregaveis": ["Protótipo funcional", "Código-fonte"]
+        },
+        {
+          "nome": "Etapa 3: Implementação",
+          "duracao": "2 semanas",
+          "entregaveis": ["Sistema implementado", "Documentação"]
+        }
+      ]
+    },
+    "investimento": {
+      "titulo": "Investimento",
+      "total": "R$ 18.500,00",
+      "parcelas": "3x de R$ 6.166,67",
+      "observacoes": "Valores sujeitos a impostos conforme legislação vigente. Desconto de 10% para pagamento à vista."
+    },
+    "conclusao": {
+      "titulo": "Conclusão",
+      "conteudo": "Estamos animados com a possibilidade de trabalhar juntos neste projeto. Acreditamos que nossa expertise irá contribuir significativamente para o sucesso da sua empresa."
+    }
+  },
+  "contato": {
+    "email": "contato@doublediamond.com.br",
+    "telefone": "+55 11 99999-9999",
+    "site": "www.doublediamond.com.br"
+  }
+}

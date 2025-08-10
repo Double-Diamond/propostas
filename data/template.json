@@ -1,0 +1,63 @@
+{
+  "cliente": {
+    "id": "CLIENT_ID",
+    "nome": "CLIENT_NAME",
+    "spaceId": "CLIENT_SPACE_ID"
+  },
+  "proposta": {
+    "titulo": "Proposta de Serviços",
+    "intro": "Olá! Nós da Double Diamond estamos felizes em apresentar esta proposta para sua empresa."
+  },
+  "secoes": {
+    "sobre": {
+      "titulo": "Sobre a Double Diamond",
+      "conteudo": "A Double Diamond é uma empresa especializada em desenvolvimento de soluções digitais, focada em resultados e excelência."
+    },
+    "escopo": {
+      "titulo": "Escopo do Projeto",
+      "conteudo": "Este projeto consiste em desenvolver uma solução completa para atender às necessidades do cliente.",
+      "itens": [
+        "Análise de requisitos",
+        "Design de interface",
+        "Desenvolvimento",
+        "Testes",
+        "Implementação"
+      ]
+    },
+    "cronograma": {
+      "titulo": "Cronograma",
+      "etapas": [
+        {
+          "nome": "Etapa 1: Planejamento",
+          "duracao": "2 semanas",
+          "entregaveis": ["Documento de requisitos", "Plano de projeto"]
+        },
+        {
+          "nome": "Etapa 2: Desenvolvimento",
+          "duracao": "4 semanas",
+          "entregaveis": ["Protótipo funcional", "Código-fonte"]
+        },
+        {
+          "nome": "Etapa 3: Implementação",
+          "duracao": "2 semanas",
+          "entregaveis": ["Sistema implementado", "Documentação"]
+        }
+      ]
+    },
+    "investimento": {
+      "titulo": "Investimento",
+      "total": "R$ XX.XXX,XX",
+      "parcelas": "3x de R$ X.XXX,XX",
+      "observacoes": "Valores sujeitos a impostos conforme legislação vigente."
+    },
+    "conclusao": {
+      "titulo": "Conclusão",
+      "conteudo": "Estamos animados com a possibilidade de trabalhar juntos neste projeto. Acreditamos que nossa expertise irá contribuir significativamente para o sucesso da sua empresa."
+    }
+  },
+  "contato": {
+    "email": "contato@doublediamond.com.br",
+    "telefone": "+55 11 99999-9999",
+    "site": "www.doublediamond.com.br"
+  }
+}
